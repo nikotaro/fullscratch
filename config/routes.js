@@ -34,7 +34,24 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  //店舗情報の追加
+  '/rst/add/:restname/:latitude/:longitude/': {
+    controller: 'Restaurant',
+    action: 'add'
+  },
+  //写真情報の追加
+  '/image/add/:restid/:userid/:imageurl/': {
+  //'/image/add/:restid/:imageurl/': {
+    controller: 'Image',
+    action: 'add'
+  },
+  //新規ユーザーの追加
+  '/user/add/:username/:password/': {
+    controller: 'User',
+    action: 'add'
+  },
+
 
   /***************************************************************************
   *                                                                          *

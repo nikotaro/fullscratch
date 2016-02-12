@@ -21,6 +21,21 @@ module.exports = {
   //   connection: 'someMysqlServer'
   // },
 
+  connections : {
+    mongolab: {
+      adapter: 'sails-mongo',
+      host: 'ds061335.mongolab.com',
+      port: 61335,
+      user: 'masaaki',
+      password: 'oinai0171',
+      database: 'fullscratch'
+    },
+    models: {
+      connection: 'mongolab'
+    },
+    port: process.env.PORT || 80
+  }
+
   /***************************************************************************
    * Set the port in the production environment to 80                        *
    ***************************************************************************/

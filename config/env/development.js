@@ -17,8 +17,18 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+   connections : {
+     mongolab: {
+       adapter: 'sails-mongo',
+       host: 'ds061335.mongolab.com',
+       port: 61335,
+       user: 'masaaki',
+       password: 'oinai0171',
+       database: 'fullscratch'
+     }
+   },
+   models: {
+      connection: 'mongolab'
+   }
 
 };
